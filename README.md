@@ -58,6 +58,7 @@ The value-iteration process is an MDP (Markov Decision Process) which solves Bel
  Running the algorith yields an optimal policy for each agent respectively.
  
 **Optimal-policy-Mario:** `{(1, 3): 'right', (1, 2): 'right', (4, 6): 'right', (1, 6): 'right', (4, 2): 'right', (2, 6): 'up', (2, 3): 'up', (4, 3): 'right'}`
+
 **Optimal-policy-Bowser:** `{(1, 3): 'left', (1, 2): 'up', (4, 6): 'left', (1, 6): 'left', (4, 2): 'up', (2, 6): 'left', (2, 3): 'left', (4, 3): 'left'}`
  
  ### Sources
