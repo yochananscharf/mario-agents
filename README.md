@@ -12,7 +12,8 @@ The value-iteration process is an MDP (Markov Decision Process) which solves Bel
 
 we start from initializing the utility of every state as zero and we set γ as 0.5. We then loop through states using the Bellman equation.
 
- ![bellman]("bellman.png")
+![bellman](https://github.com/yochananscharf/mario-agents/assets/10595146/ee1ca209-788b-4bf7-a250-a3aad4a9090c)
+
  
  
  
