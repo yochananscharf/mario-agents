@@ -157,12 +157,12 @@ class ui:
                 d1 = g.states[game_state[0]-1].outcomes[s1]
 
                 if p2_optimal:                  
-                    s2 = agent2.optimal_strategies[(game_state[1],game_state[0])]
+                    s2 = agent2.optimal_strategies[(game_state[0],game_state[1])]
                 else:
                     s2 = agent2.get_random_strategy(game_state[1])
                 d2 = g.states[game_state[1]-1].outcomes[s2]
 
-                # Compute success proability
+                # Compute success probability
                 p1_success = g.P(game_state[0],d1,s1,game_state[1],s2)
                 p2_success = g.P(game_state[1],d2,s2,game_state[0],s1)
 
