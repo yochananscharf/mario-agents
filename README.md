@@ -47,10 +47,21 @@ The value-iteration process is an MDP (Markov Decision Process) which solves Bel
  
  1. Initialization: we start from initializing the utility of every state as zero and we set γ as 0.5. We then loop through states using the Bellman equation.
 
- 2. Value Update: Iteratively update the value function using the Bellman equation: `Vk+1(s)=max⁡a∈A∑s′P(s′∣s, a)[R(s, a,s′)+γVk(s′)]Vk+1​(s)=a∈Amax​s′∑​P(s′∣s, a)[R(s, a,s′)+γVk​(s′)]` This equation calculates the expected cumulative reward for taking action aa in state ss and then following the optimal policy thereafter.
- 3. Convergence Check: Continue the iteration until the value function converges, i.e., the change in the value function between iterations is smaller than a predefined threshold ϵϵ.
+ 2. Value Update: Iteratively update the value function using the Bellman equation: `Vk+1(s)=max⁡a∈A∑s′P(s′∣s, a)[R(s, a,s′)+γVk(s′)]Vk+1​(s)=a∈Amax​s′∑​P(s′∣s, a)[R(s, a,s′)+γVk​(s′)]` This equation calculates the expected cumulative reward for taking action `a` in state `s` and then following the optimal policy thereafter.
+ 3. Convergence Check: Continue the iteration until the value function converges, i.e., the change in the value function between iterations is smaller than a predefined threshold ϵ.
  4. Extract Policy: Once the value function has converged, the optimal policy can be derived by selecting the action that maximizes the expected cumulative reward:π∗(s)=arg⁡max⁡a∈A∑s′P(s′∣s, a)
  
  `[R(s, a,s′)+γV∗(s′)]π∗(s)=arga∈Amax​s′∑​P(s′∣s, a)[R(s, a,s′)+γV∗(s′)]`
  
+ ## Results
  
+ Running the algorith yields an optimal policy for each agent respectively.
+ 
+ 
+ 
+ ### Sources
+ 
+https://www.geeksforgeeks.org/implement-value-iteration-in-python/
+
+https://medium.com/@ngao7/markov-decision-process-value-iteration-2d161d50a6ff
+
