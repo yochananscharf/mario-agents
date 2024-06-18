@@ -2,6 +2,10 @@
 
 Given an enviroment and two agents (Mario and Bowser).
 
+![mario_bowser](https://github.com/yochananscharf/mario-agents/assets/10595146/f0067f71-ee47-4a33-8261-4d96f2963319)
+
+
+
 The goal is to write an algorithm that trains the two agents to navigate the environment while maximising thier reward.
 
 
