@@ -59,6 +59,8 @@ class agent:
         else:
             agnt = 1
             oppnt = 0
+
+        # update values for each state using the Bellman equation
         while True:
             delta = 0
             for state in states:
@@ -67,19 +69,26 @@ class agent:
                 state_opponent = state[oppnt]
                 if (state_agent == 5) or (state_opponent == 5) or (state_agent == state_opponent):
                     continue
+                #get all possible agent-actions 
                 actions = self.game.states[state_agent-1].actions
+                #get all possible opponent-actions
                 actions_opponent = self.game.states[state_opponent-1].actions
-                
+                #get all possible action pairs
                 action_pairs = [(action_a, action_o) for action_a in actions for action_o in actions_opponent]
+                # get transition vlaues for states taking into account both agents and thier action
                 transitionVals = [self.game.P(state_agent, self.game.states[state_agent-1].outcomes[actn_agnt], actn_agnt, state_opponent,  actn_opnt) for (actn_agnt,actn_opnt ) in action_pairs]
+                # get reward values for outcomes for each actions pair
                 rewardVals = [self.game.R(state_agent, self.game.states[state_agent-1].outcomes[actn_agnt], actn_agnt, state_opponent,  actn_opnt) for (actn_agnt,actn_opnt ) in action_pairs]
+                
                 ds_opponent = [self.game.states[state_opponent-1].outcomes[actn_opnt] for _, actn_opnt in action_pairs]
                 ds_agent = [self.game.states[state_agent-1].outcomes[actn_agnt] for actn_agnt, _ in action_pairs]
 
                 v = V[state]
 
+                # get discounted values of future state
                 if self.player == 1:
                     dest_pairs = list(zip(ds_agent,ds_opponent))
+                    
                     discounted = [gamma * V[(dest_a,dest_o )] for (dest_a, dest_o) in dest_pairs]
                 else:
                     dest_pairs = list(zip(ds_opponent, ds_agent))
