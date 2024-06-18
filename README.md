@@ -15,23 +15,6 @@ The value-iteration process is an MDP (Markov Decision Process) which solves Bel
 
  
  
- 
- # Multi Agent Mini-Project
-
-Given an enviroment and two agents (Mario and Bowser).
-
-The goal is to write an algorithm that trains the two agents to navigate the environment while maximising thier reward.
-
-
-## Value iteration MDP
-We implemented a value-iteration process.
-
-The value-iteration process is an MDP (Markov Decision Process) which solves Belmman's equation.
-
-
-
- ![bellman](./bellman.png)
- 
 ## Markov Decision Processes
  
  - **States (S):** A finite set of states that represent all - possible situations in the environment.
